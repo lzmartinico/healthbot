@@ -1,0 +1,9 @@
+npm start > /dev/null &
+sleep 5
+if ``eslint *.js`` && [[ -n `pidof -k node` ]] ; then 
+    echo "Pass linter and npm doesn't crash"
+    exit 0
+else
+    pkill node
+    exit 1
+fi

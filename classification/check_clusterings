@@ -1,0 +1,1 @@
+for i in $(seq 3 7); do echo "output $i : "; for j in $(seq 0 $i); do grep " $j" outputPCA$i | wc -l ; done; done
